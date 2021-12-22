@@ -9,7 +9,9 @@ public final class Telefono implements Serializable {
 
     public Telefono(Long telefono){
         this.telefono = Objects.requireNonNull(telefono, "El telefono es requerido");
-
+        if( telefono < 999999){
+            throw new IllegalArgumentException("El telefono debe contener almenos 7 digitos");
+        }
     }
 
     public Long getTelefono() {

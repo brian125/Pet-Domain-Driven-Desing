@@ -8,7 +8,7 @@ import co.com.sofka.generico.DomainEvent;
 
 public class agenciaCreada extends DomainEvent {
 
-    private AgenciaId agenciaId;
+    private final AgenciaId agenciaId;
     private final Nombre nombre;
     private final Telefono telefono;
     private final Email email;
